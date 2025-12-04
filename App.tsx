@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
 import Pricing from './components/Pricing';
@@ -10,6 +11,7 @@ import TouchPanelShowcase from './components/TouchPanelShowcase';
 function App() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      <Header />
       <Hero />
       <ProblemSolution />
       <BusinessXR />

@@ -2,50 +2,52 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark text-white">
-      {/* Abstract Background mimicking particles/turbine flow */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900 via-slate-900 to-black"></div>
-        <img 
-            src="https://picsum.photos/seed/turbine/1920/1080" 
-            alt="Abstract Flow" 
-            className="w-full h-full object-cover mix-blend-overlay opacity-30"
-        />
+    <section className="relative w-full overflow-hidden bg-brand-dark text-white pt-[140px] pb-24">
+      {/* Abstract Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 via-slate-900 to-purple-950/30"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Интерактивные стенды <span className="text-blue-400">«под ключ»</span>: от сценария до монтажа на площадке.
-          </h1>
-          <div className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed">
-            Объединяем топовое «железо» и сложную разработку в стабильный продукт.
-          </div>
-          <p className="text-blue-200 text-lg">
-            Идеально для ответственных презентаций.
-          </p>
-          <div className="pt-4">
-             <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-all shadow-[0_0_20px_rgba(59,130,246,0.5)]">
-               Связаться с нами
-             </button>
-          </div>
-        </div>
+      {/* Main Container */}
+      <div className="relative z-10 w-full">
+        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-16 lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left Content */}
+            <div className="space-y-8 min-w-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight whitespace-pre-line">
+                <span className="whitespace-nowrap">Интерактивные стенды</span><br />
+                от сценария до<br />
+                монтажа на площадке
+              </h1>
+              <p className="text-base md:text-lg lg:text-xl font-medium text-[#B7B7B7] leading-[1.4] max-w-[500px]">
+                Объединяем «железо» и сложную разработку<br />
+                в стабильный продукт.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                 <button 
+                   onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} 
+                   className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium py-3 px-10 rounded-full transition-all text-base"
+                 >
+                   связаться
+                 </button>
+                 <button 
+                   className="border border-[#A053FF] hover:bg-[#A053FF]/10 text-[#B7B7B7] hover:text-white font-medium py-3 px-10 rounded-full transition-all text-base"
+                 >
+                   получить презентацию
+                 </button>
+              </div>
+            </div>
 
-        <div className="hidden md:flex justify-center items-center">
-            {/* AI Robot */}
-            <div className="relative">
-                <div className="absolute inset-0 bg-blue-500/20 blur-3xl animate-pulse"></div>
+            {/* Right - 3D Image */}
+            <div className="hidden lg:flex justify-end items-center">
                 <img 
                     src="/references/images/robot.png" 
-                    alt="AI Robot" 
-                    className="relative z-10 w-auto h-[650px] object-contain drop-shadow-2xl hover:scale-105 transition-all duration-700"
+                    alt="3D Interactive Display" 
+                    className="w-full max-w-[750px] h-auto object-contain translate-x-20"
                 />
             </div>
+          </div>
         </div>
-      </div>
-      
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
       </div>
     </section>
   );
