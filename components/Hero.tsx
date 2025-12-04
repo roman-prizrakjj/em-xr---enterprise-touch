@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
 
       {/* Main Container */}
       <div className="relative z-10 w-full">
-        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-16 lg:px-20">
+        <div className="w-full px-6 md:px-16 lg:px-24 xl:px-32">
           {/* Mobile: Robot on top */}
           <div className="lg:hidden flex justify-center mb-8">
             <img 

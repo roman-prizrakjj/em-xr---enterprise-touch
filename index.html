@@ -13,7 +13,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Houschka Pro', 'Inter', 'sans-serif'],
             },
             colors: {
               brand: {
@@ -28,7 +28,14 @@
       }
     </script>
     <style>
-      body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+      @font-face {
+        font-family: 'Houschka Pro';
+        src: url('/fonts/houschkapro_demibold.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      body { font-family: 'Houschka Pro', 'Inter', sans-serif; background-color: #f8fafc; }
       .glass {
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(10px);

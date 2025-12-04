@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md">
-      <div className="w-full h-[82px] flex items-center px-4 md:px-8 lg:px-12">
+      <div className="w-full h-[82px] flex items-center px-6 md:px-16 lg:px-24 xl:px-32">
         {/* Logo */}
         <a href="#" className="flex items-center">
           <img src="/references/images/logo.svg" alt="EM XR" className="h-14 w-auto" />
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className={`transition-all duration-300 text-base font-medium relative ${
+                className={`transition-all duration-300 text-base font-medium leading-[120%] relative ${
                   index === 0 
                     ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]' 
                     : 'text-[#B7B7B7] hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]'
