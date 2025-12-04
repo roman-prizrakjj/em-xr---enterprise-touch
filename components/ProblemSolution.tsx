@@ -21,11 +21,11 @@ const ProblemSolution: React.FC = () => {
 
   return (
     <section className="py-20 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-10">
           {problems.map((item, idx) => (
-            <div key={idx} className="bg-gray-200 rounded-3xl overflow-hidden p-6 flex flex-col">
-              <div className="h-64 flex items-center justify-center">
+            <div key={idx} className="bg-gray-200 rounded-3xl overflow-hidden p-8 flex flex-col">
+              <div className="h-80 flex items-center justify-center">
                 <img 
                   src={item.img} 
                   alt={item.title} 
@@ -33,7 +33,7 @@ const ProblemSolution: React.FC = () => {
                 />
               </div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">{item.title}</h3>
                 <p className="text-slate-600 text-base leading-relaxed">{item.desc}</p>
               </div>
             </div>
