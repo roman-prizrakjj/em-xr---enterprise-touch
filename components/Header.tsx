@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: 'Главная', href: '#' },
-    { label: 'О компании', href: '#about' },
-    { label: 'Услуги', href: '#services' },
-    { label: 'Проекты', href: '#projects' },
+    { label: t('nav.home'), href: '#' },
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.projects'), href: '#projects' },
   ];
 
   return (
@@ -59,10 +61,13 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium h-[42px] px-4 rounded-[28px] transition-all duration-300 text-base hover:shadow-[0_0_20px_rgba(160,83,255,0.5)] hover:scale-[1.02] flex items-center justify-center"
             >
-              Связаться
+              {t('nav.contact')}
             </a>
-            <button className="text-[#B7B7B7] hover:text-white transition-all duration-300 text-base font-medium w-[43px] h-[42px] rounded-[28px] border border-[#A053FF] hover:bg-[#A053FF]/10 hover:shadow-[0_0_15px_rgba(160,83,255,0.3)] hover:border-[#B070FF]">
-              En
+            <button 
+              onClick={toggleLanguage}
+              className="text-[#B7B7B7] hover:text-white transition-all duration-300 text-base font-medium w-[43px] h-[42px] rounded-[28px] border border-[#A053FF] hover:bg-[#A053FF]/10 hover:shadow-[0_0_15px_rgba(160,83,255,0.3)] hover:border-[#B070FF]"
+            >
+              {language === 'ru' ? 'En' : 'Ru'}
             </button>
           </div>
         </div>
@@ -90,10 +95,13 @@ const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium py-2.5 px-6 rounded-full transition-all text-sm text-center"
               >
-                Связаться
+                {t('nav.contact')}
               </a>
-              <button className="text-[#B7B7B7] hover:text-white text-sm font-medium w-[40px] h-[38px] rounded-full border border-[#A053FF]">
-                En
+              <button 
+                onClick={() => { toggleLanguage(); setIsMenuOpen(false); }}
+                className="text-[#B7B7B7] hover:text-white text-sm font-medium w-[40px] h-[38px] rounded-full border border-[#A053FF]"
+              >
+                {language === 'ru' ? 'En' : 'Ru'}
               </button>
             </div>
           </nav>

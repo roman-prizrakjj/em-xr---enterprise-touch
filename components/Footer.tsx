@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer id="contact" className="w-full">
       {/* Top Section - White with Large Call to Action */}
@@ -11,9 +14,9 @@ const Footer: React.FC = () => {
           {/* Large Text */}
           <div className="flex-1">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight uppercase tracking-tight">
-              ДАВАЙТЕ<br/>
-              СОЗДАВАТЬ<br/>
-              БУДУЩЕЕ ВМЕСТЕ
+              {t('footer.cta.line1')}<br/>
+              {t('footer.cta.line2')}<br/>
+              {t('footer.cta.line3')}
             </h2>
           </div>
 
@@ -27,7 +30,7 @@ const Footer: React.FC = () => {
              >
                 <div className="absolute inset-0 bg-[#A053FF] rounded-full blur opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
                 <div className="relative bg-[#0f172a] hover:bg-[#A053FF] text-white text-xl md:text-2xl font-bold py-6 px-12 md:px-16 rounded-full transition-all duration-300 flex items-center gap-4 overflow-hidden">
-                    <span className="relative z-10">СВЯЗАТЬСЯ С НАМИ</span>
+                    <span className="relative z-10">{t('footer.cta.button')}</span>
                     <svg className="w-8 h-8 relative z-10 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     
                     {/* Abstract bg inside button */}
@@ -48,9 +51,9 @@ const Footer: React.FC = () => {
                     <span className="text-white font-semibold text-lg">+7 (499) 961-63-64</span>
                     <a href="mailto:xr@emg.fm" className="text-[#A053FF] hover:text-[#B070FF] underline">xr@emg.fm</a>
                 </div>
-                <div>Electronic Mushroom, LLC, ITN 7730239595</div>
-                <div>IT services, software, production, marketing</div>
-                <a href="#" className="underline hover:text-white">Privacy Policy</a>
+                <div>{t('footer.company')}</div>
+                <div>{t('footer.services')}</div>
+                <a href="#" className="underline hover:text-white">{t('footer.privacy')}</a>
             </div>
 
             <div className="flex gap-4">

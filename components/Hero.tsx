@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative w-full overflow-hidden bg-brand-dark text-white pt-[100px] lg:pt-[140px] pb-12 lg:pb-24">
       {/* Abstract Background */}
@@ -81,7 +84,7 @@ const Hero: React.FC = () => {
                             </svg>
                           </div>
                         </div>
-                        <div className="text-white/50 text-[8px]">Коснитесь экрана</div>
+                        <div className="text-white/50 text-[8px]">{t('hero.screenTouchShort')}</div>
                       </div>
                     </div>
 
@@ -107,13 +110,13 @@ const Hero: React.FC = () => {
             {/* Left Content */}
             <div className="space-y-6 lg:space-y-8 min-w-0 text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight">
-                <span className="lg:whitespace-nowrap">Интерактивные стенды</span><br />
-                от сценария до<br />
-                монтажа на площадке
+                <span className="lg:whitespace-nowrap">{t('hero.title1')}</span><br />
+                {t('hero.title2')}<br />
+                {t('hero.title3')}
               </h1>
               <p className="text-base md:text-lg lg:text-xl font-medium text-[#B7B7B7] leading-[1.4] max-w-[500px] mx-auto lg:mx-0">
-                Объединяем «железо» и сложную разработку<br />
-                в стабильный продукт.
+                {t('hero.description')}<br />
+                {t('hero.description2')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                  <a 
@@ -122,7 +125,7 @@ const Hero: React.FC = () => {
                    rel="noopener noreferrer"
                    className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto text-center"
                  >
-                   связаться
+                   {t('hero.cta')}
                  </a>
                  <a 
                    href="https://t.me/electronicmushroom"
@@ -130,7 +133,7 @@ const Hero: React.FC = () => {
                    rel="noopener noreferrer"
                    className="border border-[#A053FF] hover:bg-[#A053FF]/10 text-[#B7B7B7] hover:text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto text-center"
                  >
-                   получить презентацию
+                   {t('hero.cta2')}
                  </a>
               </div>
             </div>
@@ -173,7 +176,7 @@ const Hero: React.FC = () => {
                             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#A053FF] to-purple-600 flex items-center justify-center">
                               <span className="text-white font-bold text-[10px]">EM</span>
                             </div>
-                            <span className="text-white/80 text-xs font-medium">EM XR Interactive Display</span>
+                            <span className="text-white/80 text-xs font-medium">{t('hero.screenBrand')}</span>
                           </div>
                           <div className="flex items-center gap-3">
                             <div className="flex items-center gap-1.5">
@@ -218,7 +221,7 @@ const Hero: React.FC = () => {
                                 </svg>
                               </div>
                             </div>
-                            <div className="text-white/50 text-[10px]">Коснитесь экрана для взаимодействия</div>
+                            <div className="text-white/50 text-[10px]">{t('hero.screenTouch')}</div>
                           </div>
                         </div>
 
