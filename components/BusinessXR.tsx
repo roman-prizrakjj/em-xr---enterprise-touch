@@ -34,7 +34,7 @@ const BusinessXR: React.FC = () => {
             Контент для тач-панелей и киосков
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
-            Мы создаем интуитивные интерфейсы и <span className="text-blue-600 font-semibold">интерактивный контент</span> специально для сенсорных экранов. Сделайте ваши стенды, шоурумы и презентации по-настоящему <span className="text-blue-600 font-semibold">осязаемыми</span>.
+            Мы создаем интуитивные интерфейсы и <span className="text-[#A053FF] font-semibold">интерактивный контент</span> специально для сенсорных экранов. Сделайте ваши стенды, шоурумы и презентации по-настоящему <span className="text-[#A053FF] font-semibold">осязаемыми</span>.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const BusinessXR: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {features.map((f, idx) => (
             <div key={idx} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 group">
-              <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="w-16 h-16 bg-purple-100 text-[#A053FF] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#A053FF] group-hover:text-white transition-colors">
                 {f.icon}
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">{f.title}</h3>
@@ -66,14 +66,14 @@ const BusinessXR: React.FC = () => {
                <p className="text-slate-300 text-lg leading-relaxed mb-6">
                  От разработки UX/UI интерфейса до интеграции с <span className="text-white font-semibold">тач-панелями</span> любого размера. Мы превращаем "мертвые" экраны в <span className="text-white font-semibold">магниты для аудитории</span> на выставках и в офисах продаж.
                </p>
-               <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg">
+               <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg">
                  Обсудить проект
                </button>
              </div>
              <div className="hidden md:flex justify-center">
                <div className="relative w-64 h-48 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex items-center justify-center">
                   <svg className="w-16 h-16 text-white opacity-80 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg>
-                  <div className="absolute bottom-4 right-4 bg-blue-600 px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase">TOUCH READY</div>
+                  <div className="absolute bottom-4 right-4 bg-[#A053FF] px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase">TOUCH READY</div>
                </div>
              </div>
           </div>

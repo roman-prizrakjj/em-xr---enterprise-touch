@@ -44,7 +44,7 @@ const SeoOptimizer: React.FC = () => {
                         <h4 className="font-bold text-slate-800 mb-2">Актуальные запросы в нише XR:</h4>
                         <div className="flex flex-wrap gap-2">
                             {data.keywords.map((kw, i) => (
-                                <span key={i} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
+                                <span key={i} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
                                     {kw}
                                 </span>
                             ))}
@@ -56,7 +56,7 @@ const SeoOptimizer: React.FC = () => {
                              <ul className="text-xs text-gray-500 space-y-1">
                                 {data.sources.slice(0, 3).map((s, i) => (
                                     <li key={i} className="truncate">
-                                        <a href={s.uri} target="_blank" rel="noreferrer" className="hover:text-blue-600 hover:underline">
+                                        <a href={s.uri} target="_blank" rel="noreferrer" className="hover:text-[#A053FF] hover:underline">
                                             {s.title}
                                         </a>
                                     </li>

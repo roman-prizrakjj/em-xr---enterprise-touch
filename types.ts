@@ -1,6 +1,7 @@
 export interface ServicePackage {
   title: string;
   subtitle: string;
+  price?: string;
   description: string;
   features: string[];
   cta: string;
