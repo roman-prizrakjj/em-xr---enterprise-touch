@@ -81,9 +81,14 @@ const Pricing: React.FC = () => {
               </ul>
 
               {/* CTA Button */}
-              <button className="w-full py-4 border-2 border-[#A053FF] text-[#A053FF] font-bold rounded-full hover:bg-[#A053FF] hover:text-white transition-all duration-300">
+              <a 
+                href="https://t.me/electronicmushroom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 border-2 border-[#A053FF] text-[#A053FF] font-bold rounded-full hover:bg-[#A053FF] hover:text-white transition-all duration-300 block text-center"
+              >
                 {pkg.cta}
-              </button>
+              </a>
             </div>
           ))}
         </div>

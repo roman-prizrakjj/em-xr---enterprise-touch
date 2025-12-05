@@ -116,17 +116,22 @@ const Hero: React.FC = () => {
                 в стабильный продукт.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                 <button 
-                   onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} 
-                   className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto"
+                 <a 
+                   href="https://t.me/electronicmushroom"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto text-center"
                  >
                    связаться
-                 </button>
-                 <button 
-                   className="border border-[#A053FF] hover:bg-[#A053FF]/10 text-[#B7B7B7] hover:text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto"
+                 </a>
+                 <a 
+                   href="https://t.me/electronicmushroom"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="border border-[#A053FF] hover:bg-[#A053FF]/10 text-[#B7B7B7] hover:text-white font-medium py-3 px-10 rounded-full transition-all text-base w-full sm:w-auto text-center"
                  >
                    получить презентацию
-                 </button>
+                 </a>
               </div>
             </div>
 

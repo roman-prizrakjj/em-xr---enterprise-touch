@@ -20,7 +20,9 @@ const Footer: React.FC = () => {
           {/* CTA Button */}
           <div className="flex-shrink-0">
              <a 
-               href="mailto:xr@emg.fm"
+               href="https://t.me/electronicmushroom"
+               target="_blank"
+               rel="noopener noreferrer"
                className="relative group block"
              >
                 <div className="absolute inset-0 bg-[#A053FF] rounded-full blur opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>

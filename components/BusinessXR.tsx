@@ -64,11 +64,11 @@ const BusinessXR: React.FC = () => {
                  Сенсорные решения под ключ
                </h3>
                <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                 От разработки UX/UI интерфейса до интеграции с <span className="text-white font-semibold">тач-панелями</span> любого размера. Мы превращаем "мертвые" экраны в <span className="text-white font-semibold">магниты для аудитории</span> на выставках и в офисах продаж.
+                 От разработки UX/UI интерфейса до интеграции с <span className="text-[#A053FF] font-semibold">тач-панелями</span> любого размера. Мы превращаем "мертвые" экраны в <span className="text-[#A053FF] font-semibold">магниты для аудитории</span> на выставках и в офисах продаж.
                </p>
-               <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg">
+               <a href="https://t.me/electronicmushroom" target="_blank" rel="noopener noreferrer" className="bg-[#A053FF] hover:bg-[#B070FF] text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg inline-block">
                  Обсудить проект
-               </button>
+               </a>
              </div>
              <div className="hidden md:flex justify-center">
                <div className="relative w-64 h-48 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 flex items-center justify-center">
