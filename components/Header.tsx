@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const navItems = [
     { label: t('nav.home'), href: '#' },
     { label: t('nav.about'), href: '#about' },
-    { label: t('nav.services'), href: '#services' },
+    { label: t('nav.services'), href: '#pricing' },
     { label: t('nav.projects'), href: '#projects' },
   ];
 

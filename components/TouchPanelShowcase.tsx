@@ -135,7 +135,7 @@ const TouchPanelShowcase: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 md:py-32 text-white overflow-hidden min-h-screen">
+    <section id="projects" className="relative py-20 md:py-32 text-white overflow-hidden min-h-screen">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[#0a0a12]">
         {/* Grid Pattern */}
