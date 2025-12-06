@@ -156,33 +156,12 @@ const TouchPanelShowcase: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 md:px-6">
         
         <div className="text-center mb-6 md:mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-600/20 text-blue-400 px-3 md:px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6 border border-blue-500/30 backdrop-blur-sm">
-            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-blue-500 rounded-full animate-pulse"></span>
-            Interactive Kiosk
-          </div>
           <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold mb-2 md:mb-4">
             {t('touch.sectionTitle')}
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-xl px-4">
             {t('touch.sectionDesc')}
           </p>
-        </div>
-
-        {/* Stand Type Indicator */}
-        <div className="text-center mb-4 md:mb-6">
-          <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-1 md:mb-2">{t(currentStandInfo.nameKey)}</h3>
-          <p className="text-slate-400 text-xs md:text-base">{t(currentStandInfo.descKey)}</p>
-          <div className="flex justify-center gap-2 mt-3 md:mt-4">
-            {stands.map((stand) => (
-              <button
-                key={stand.id}
-                onClick={() => { setCurrentStand(stand.id); setCurrentScreen('home'); }}
-                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${
-                  currentStand === stand.id ? 'bg-blue-500 w-6 md:w-8' : 'bg-white/20 hover:bg-white/40'
-                }`}
-              />
-            ))}
-          </div>
         </div>
 
         <div 
@@ -766,6 +745,23 @@ const TouchPanelShowcase: React.FC = () => {
             </div>
             )}
 
+          </div>
+        </div>
+
+        {/* Stand Type Indicator */}
+        <div className="text-center mb-4 md:mb-6 mt-8 md:mt-12">
+          <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-1 md:mb-2">{t(currentStandInfo.nameKey)}</h3>
+          <p className="text-slate-400 text-xs md:text-base">{t(currentStandInfo.descKey)}</p>
+          <div className="flex justify-center gap-2 mt-3 md:mt-4">
+            {stands.map((stand) => (
+              <button
+                key={stand.id}
+                onClick={() => { setCurrentStand(stand.id); setCurrentScreen('home'); }}
+                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${
+                  currentStand === stand.id ? 'bg-blue-500 w-6 md:w-8' : 'bg-white/20 hover:bg-white/40'
+                }`}
+              />
+            ))}
           </div>
         </div>
 
